@@ -1,5 +1,5 @@
-print("Xush kelibsiz!")
-name = input("Ismingizni Kriting: ")
+print("Welcome!")
+name = input("Please enter your name: ")
 action = "menu"
 print("-"*120)
 print("")
@@ -7,15 +7,15 @@ print("")
 while action == "menu":
     print("MENU            ",name,)      #MENU
     print("")
-    print("Matematik Test -- 'math' ")
+    print("Mathematical test -- 'test' ")
     print("")
-    print("Kalkulyator -- 'cal' ")
+    print("Calculator -- 'cal' ")
     print("")
-    print("Aylana Uzunigi -- 'len' ")
+    print("Length of circle -- 'len' ")
     print("")
-    print("Darajaga Oshirish -- 'pow' ")
+    print("Power of -- 'pow' ")
     print("")
-    print("Taqqoslash -- 'taq' ")
+    print("Comparison -- 'comp' ")
     print("")
     action = input()
     
@@ -33,16 +33,18 @@ while action == "menu":
             c = random.randint(5,15)
             d = random.randint(1,5)
             print("-" * 120)
-            print("SAVOL ",question,"/10")
+            print("Questian ",question,"/10")
             print("")
             ans = a * b * c * d
             print(a," * ",b," * ",c," * ",d," = ?")
             ur_ans = int(input())
             if ur_ans == ans:
                 score = score + 1
-                print("Correct! Your Score: ",score)
+                print("Correct!   + 1")
+                print("Your Score: ",score)
             else:
-                print("Incorrect! Your Score: ",score)
+                print("Incorrect!  - 1")
+                print("Your Score: ",score)
         action = "menu"
         print("-" * 120)
         
