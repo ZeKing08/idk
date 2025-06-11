@@ -1,29 +1,24 @@
+import time
+import random
+
 print("Welcome!")
 name = input("Please enter your name: ")
 action = "menu"
-print("-"*120)
-print("")
+print("-"*120,end="\n")
 
 while action == "menu":
-    print("MENU            ",name,)      #MENU
-    print("")
-    print("Mathematical test -- 'test' ")
-    print("")
-    print("Calculator (demo) -- 'cal' ")
-    print("")
-    print("Length of circle -- 'len' ")
-    print("")
-    print("Power of -- 'pow' ")
-    print("")
-    print("Comparison -- 'comp' ")
-    print("")
+    print("MENU            ",name,end="\n")            #MENU
+    print("Mathematical test -- 'test' ",end="\n")
+    print("Calculator (demo) -- 'cal' ",end="\n")
+    print("Length of circle -- 'len' ",end="\n")
+    print("Power of -- 'pow' ",end="\n")
+    print("Comparison -- 'comp' ",end="\n")
     action = input()
     
-                            #Matem Test
+                            #Math Test
     if action == "math":
         print("-" * 120)
         print("")
-        import random
         question = 1
         score = 0
         for question in range(1,2):
@@ -33,18 +28,15 @@ while action == "menu":
             c = random.randint(5,15)
             d = random.randint(1,5)
             print("-" * 120)
-            print("Questian ",question,"/10")
-            print("")
+            print("Question ",question,"/10",end="\n")
             ans = a * b * c * d
-            print(a," * ",b," * ",c," * ",d," = ?")
-            ur_ans = int(input())
-            if ur_ans == ans:
-                score = score + 1
-                print("Correct!   + 1")
-                print("Your Score: ",score)
+            user_ans = int(input(f"{a} * {b} * {c} * {d} = "))
+            if user_ans == ans:
+                score += 1
+                print("Correct!   + 1",end="\n"); print("Your Score: ",score)
             else:
-                print("Incorrect!  - 1")
-                print("Your Score: ",score)
+                print("Incorrect!  - 1",end="\n"); print("Your Score: ",score)
+        print("Your result:",end="\n");print(f"Correct answers: {cor_ans} | Incorrect answers: {ins_ans} | Time: {time} | ")
         action = "menu"
         print("-" * 120)
         
@@ -93,12 +85,3 @@ while action == "menu":
                 print(f"{a}<{b}")
             else:
                 print(f"{a}={b}")
-
-
-
-
-
-
-
-
-            
