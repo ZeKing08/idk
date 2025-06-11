@@ -14,12 +14,10 @@ while action == "menu":
     print("Power of -- 'pow' ",end="\n")
     print("Comparison -- 'comp' ",end="\n")
     action = input()
-    
+    print("-" * 120,end="\n")
                             #Math Test
     if action == "math":
-        print("-" * 120)
-        print("")
-        question = 1
+        
         score = 0
         for question in range(1,2):
             a = random.randint(1,10)
@@ -27,7 +25,6 @@ while action == "menu":
             q = random.randint(1,10)
             c = random.randint(5,15)
             d = random.randint(1,5)
-            print("-" * 120)
             print("Question ",question,"/10",end="\n")
             ans = a * b * c * d
             user_ans = int(input(f"{a} * {b} * {c} * {d} = "))
@@ -36,46 +33,40 @@ while action == "menu":
                 print("Correct!   + 1",end="\n"); print("Your Score: ",score)
             else:
                 print("Incorrect!  - 1",end="\n"); print("Your Score: ",score)
-        print("Your result:",end="\n");print(f"Correct answers: {cor_ans} | Incorrect answers: {ins_ans} | Time: {time} | ")
+        print("Your result:",end="\n");print(f"Correct answers: {cor_ans} | Incorrect answers: {ins_ans} | Time: {time} | ",end="\n")
         action = "menu"
         print("-" * 120)
         
-                            #Kalkulator
-
-                                        
+                            #Calculator                
     elif action == "cal":
         while True:
-            print("-" * 120)
             print("Error")
             action = "menu"
             break
-                        #Aylana Uzunligi
-                
+                        #Length of circle 
     elif action == "cir":
-        print("-" * 120)
         while True:
             r = int(input("Enter radius: "))
             pi = 3.14
             uzun = 2*pi*r
             print("Length of circle is -- ", uzun)
-            print("-" * 120)                 
-            continue
+            print("-" * 120,end="\n")    
+            action = "menu"             
+            break
 
                         #Daraja
         
     elif action == "pow":
-        print("-" * 120)
         while True:
-            print("Enter:    e.g. (a b)")
+            print("Enter:    e.g. (2 7)")
             a,b=map(int,input().split())
             print(f"{a} to the power of {b} is {a**b}")
-            print("-" * 120)
-            continue
+            print("-" * 120,end="\n")
+            action = "menu"
+            break
 
-                        #Taqqoslash
-        
+                        #Compare
     elif action == "comp":
-        print("-" * 120)
         while True:
             print("Enter the numbers      e.g: (a b)")
             a,b=map(int,inpur().split())
@@ -85,3 +76,5 @@ while action == "menu":
                 print(f"{a}<{b}")
             else:
                 print(f"{a}={b}")
+            action = "menu"
+            break
