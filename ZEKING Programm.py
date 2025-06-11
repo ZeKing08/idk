@@ -9,7 +9,7 @@ while action == "menu":
     print("")
     print("Mathematical test -- 'test' ")
     print("")
-    print("Calculator -- 'cal' ")
+    print("Calculator (demo) -- 'cal' ")
     print("")
     print("Length of circle -- 'len' ")
     print("")
@@ -26,7 +26,7 @@ while action == "menu":
         import random
         question = 1
         score = 0
-        for question in range(1,2,1):
+        for question in range(1,2):
             a = random.randint(1,10)
             b = random.randint(10,30)
             q = random.randint(1,10)
@@ -54,34 +54,18 @@ while action == "menu":
     elif action == "cal":
         while True:
             print("-" * 120)
-            print("Ammallarni Kiriting((a + b * 2) / 2 ** 3 ")
-            print("x ** y  --> x - son, y - daraja")
-            print("")
-            a = input()
-            b = a.split()
-            c = len(b)
-            d = int(b[0] + b[2])
-            print(b,c,d)
-            print("")
-            print("Qayta foydalanish -- 'ENTER'. Menuga qaytish -- 'menu' ")
-            action = input()
-            if not action == "menu":
-                continue
-            else:
-                break
-        
-        
-        
-
+            print("Error")
+            action = "menu"
+            break
                         #Aylana Uzunligi
                 
     elif action == "cir":
         print("-" * 120)
         while True:
-            r = int(input("Aylana Radiusini Kiriting!"))
+            r = int(input("Enter radius: "))
             pi = 3.14
             uzun = 2*pi*r
-            print("Aylananing Uzunligi -- ", uzun)
+            print("Length of circle is -- ", uzun)
             print("-" * 120)                 
             continue
 
@@ -90,27 +74,25 @@ while action == "menu":
     elif action == "pow":
         print("-" * 120)
         while True:
-            print("Sonni Kiriitng        *MENUga Qaytish -- '0' ")
-            a = int(input())
-            print("Darajani Kiriting")
-            b = int(input())
-            c = a**b
-            print(a, "ning", b, "- darajasi -- ", c)
+            print("Enter:    e.g. (a b)")
+            a,b=map(int,input().split())
+            print(f"{a} to the power of {b} is {a**b}")
             print("-" * 120)
             continue
 
                         #Taqqoslash
         
-    elif action == "taq":
+    elif action == "comp":
         print("-" * 120)
         while True:
-            print("Sonlarni Kiriting! ('a b c ... n' --> shu korinishda yozing.")
-            a = input()
-            b = a.split()
-            if b[0] > b[1]:
-                print(b[0],">",b[1])
+            print("Enter the numbers      e.g: (a b)")
+            a,b=map(int,inpur().split())
+            if a>b:
+                print(f"{a}>{b}")
+            if a<b:
+                print(f"{a}<{b}")
             else:
-                print(b[0],"<",b[1])
+                print(f"{a}={b}")
 
 
 
